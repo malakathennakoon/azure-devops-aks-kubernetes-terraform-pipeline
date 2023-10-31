@@ -49,3 +49,6 @@ resource "random_pet" "aksrandom" {
 
 }
 
+provider "azuread" {
+  tenant_id = "6f21ecf1-4200-4eac-9bd4-a7198b407a91"
+}
