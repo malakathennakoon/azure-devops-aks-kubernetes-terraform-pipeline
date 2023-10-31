@@ -66,6 +66,14 @@ stages:
               name: sshkey
               inputs:
                 secureFile: 'aks-terraform-devops-ssh-key-ububtu.pub'
+            - task: AzureCLI@2
+              displayName: AZ login
+              inputs:
+                azureSubscription: 'terraform-aks-azurerm-svc-con'
+                scriptType: 'ps'
+                scriptLocation: 'inlineScript'
+                inlineScript: 'az login'
+                powerShellErrorActionPreference: 'continue'
             - task: TerraformCLI@1
               inputs:
                 command: 'init'
