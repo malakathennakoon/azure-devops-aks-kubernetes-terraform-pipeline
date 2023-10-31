@@ -39,9 +39,9 @@ terraform {
 
 # 2. Terraform Provider Block for AzureRM
 provider "azurerm" {
-  features {
-
-  }
+  features {}
+  subscription_id = "a13b08e0-7bbe-44c5-8b7f-354a9ba36d86"
+  tenant_id = "6f21ecf1-4200-4eac-9bd4-a7198b407a91"
 }
 
 # 3. Terraform Resource Block: Define a Random Pet Resource
@@ -50,5 +50,5 @@ resource "random_pet" "aksrandom" {
 }
 
 provider "azuread" {
-  tenant_id = "6f21ecf1-4200-4eac-9bd4-a7198b407a91"
+  
 }
