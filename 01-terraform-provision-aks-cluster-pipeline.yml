@@ -67,9 +67,8 @@ stages:
               inputs:
                 secureFile: 'aks-terraform-devops-ssh-key-ububtu.pub'
             - task: AzureCLI@2
-              displayName: AZ login
               inputs:
-                azureSubscription: 'terraform-aks-azurerm-svc-con'
+                azureSubscription: 'DevOps Practice(a13b08e0-7bbe-44c5-8b7f-354a9ba36d86)'
                 scriptType: 'ps'
                 scriptLocation: 'inlineScript'
                 inlineScript: 'az login'
