@@ -39,7 +39,7 @@ resource "azurerm_kubernetes_cluster" "aks_cluster" {
 azure_active_directory_role_based_access_control {
   managed = true
   admin_group_object_ids = [azuread_group.aks_administrators.id]
-  azure_rbac_enabled
+  azure_rbac_enabled = true
 } 
 
 #role_based_access_control {
