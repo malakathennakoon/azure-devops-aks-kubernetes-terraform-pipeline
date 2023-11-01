@@ -67,6 +67,9 @@ linux_profile {
 # Network Profile
 network_profile {
   load_balancer_sku = "Standard"
+  load_balancer_profile {
+     managed_outbound_ip_count = 1
+  }
   network_plugin = "azure"
 }
 
