@@ -66,11 +66,11 @@ linux_profile {
 
 # Network Profile
 network_profile {
+  network_plugin = "azure"
   load_balancer_sku = "Standard"
   load_balancer_profile {
-     managed_outbound_ip_count = 1
+      idle_timeout_in_minutes = 20
   }
-  network_plugin = "azure"
 }
 
 # AKS Cluster Tags 
