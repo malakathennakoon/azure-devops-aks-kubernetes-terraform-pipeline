@@ -32,17 +32,23 @@ resource "azurerm_kubernetes_cluster" "aks_cluster" {
 
 # Identity (System Assigned or Service Principal)
   identity { type = "SystemAssigned" }
-
+  
 
 
 # RBAC and Azure AD Integration Block
-role_based_access_control {
-  enabled = true
-  azure_active_directory {
-    managed                = true
-    admin_group_object_ids = [azuread_group.aks_administrators.id]
-  }
-}  
+azure_active_directory_role_based_access_control {
+  managed = true
+  admin_group_object_ids = [azuread_group.aks_administrators.id]
+  azure_rbac_enabled
+} 
+
+#role_based_access_control {
+  #enabled = true
+  #azure_active_directory {
+   # managed                = true
+    #admin_group_object_ids = [azuread_group.aks_administrators.id]
+  #}
+#}  
 
 # Windows Admin Profile
 windows_profile {
