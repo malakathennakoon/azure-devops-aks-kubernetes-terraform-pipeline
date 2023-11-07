@@ -1,4 +1,3 @@
-# Provision Azure AKS Cluster using Terraform and Azure DevOps
+###############This is devops practice repo#############
 
-## For Step by Step Instructions
-- [Step by Step Instructions](https://github.com/stacksimplify/azure-aks-kubernetes-masterclass/tree/master/25-Azure-DevOps-Terraform-Azure-AKS)
+PS: required versions are defined in main.tf inorder to mitigate dependancy issues.
